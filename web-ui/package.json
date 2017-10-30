@@ -7,16 +7,20 @@
     "react-dom": "^16.0.0"
   },
   "devDependencies": {
+    "@types/enzyme": "^3.1.1",
+    "@types/enzyme-adapter-react-16": "^1.0.0",
     "@types/jest": "^21.1.5",
     "@types/node": "^8.0.47",
     "@types/react": "^16.0.19",
     "@types/react-dom": "^16.0.2",
+    "enzyme": "latest",
+    "enzyme-adapter-react-16": "^1.0.2",
     "f2c-react-scripts": "2.8.3"
   },
   "scripts": {
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
-    "test": "react-scripts-ts test --env=jsdom --coverage" ,
+    "test": "react-scripts-ts test --env=jsdom --coverage --setupTestFrameworkScriptFile=raf/polyfill",
     "eject": "react-scripts-ts eject"
   }
 }

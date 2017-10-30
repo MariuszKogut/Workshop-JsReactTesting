@@ -25,6 +25,9 @@ Enzyme's API is meant to be intuitive and flexible by mimicking jQuery's API for
 Main Features:
 - Asserts for React-Based-Components
 
+Cheatsheet:
+https://devhints.io/enzyme
+
 ## Getting started
 ### Write a simple test 
 
@@ -67,6 +70,17 @@ yarn test
 
 
 ### Write a simple test for react components 
+#### Add following packages:
+```
+yarn add --dev enzyme @types/enzyme
+yarn add --dev enzyme-adapter-react-16 @types/enzyme-adapter-react-16
+```
+
+Write your first test:
+```
+
+```
+
 
 
 

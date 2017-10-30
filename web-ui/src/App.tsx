@@ -2,8 +2,9 @@ import './theme/styles.scss';
 const logo = require('./logo.svg');
 
 import * as React from 'react';
+import Caluclator from './components/Calculator';
 
-class App extends React.Component {
+export default class App extends React.Component {
   render() {
     return (
       <div className="App">
@@ -11,12 +12,8 @@ class App extends React.Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React - tweaked by F2C</h2>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
+        <Caluclator/>
       </div>
     );
   }
 }
-
-export default App;

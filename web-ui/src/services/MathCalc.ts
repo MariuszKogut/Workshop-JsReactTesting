@@ -1,4 +1,4 @@
-export class Calculator {
+export class MathCalc {
   add(a: number, b: number): number {
     return a + b;
   }
