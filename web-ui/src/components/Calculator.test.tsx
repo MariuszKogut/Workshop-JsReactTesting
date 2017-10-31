@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { configure, mount, shallow } from 'enzyme';
+import { configure, shallow } from 'enzyme';
 import * as ReactSixteenAdapter from 'enzyme-adapter-react-16';
 import Calculator, { CalculatorState } from './Calculator';
 
@@ -14,7 +14,7 @@ describe('<Calucaltor />', () => {
   });
 
   it('should render value1, value2 and a button', () => {
-    const sut = mount(<Calculator/>);
+    const sut = shallow(<Calculator/>);
     expect(sut).not.toBeNull();
 
     const controls = {

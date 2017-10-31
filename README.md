@@ -5,7 +5,6 @@ Workshop docs for testing with JavaScript, Jest and React using TypeScript
 ### Facebook Jest 
 Link: https://facebook.github.io/jest/
 
-Description:
 Jest is used by Facebook to test all JavaScript code including React applications. One of Jest's philosophies is to provide an integrated "zero-configuration" experience. We observed that when engineers are provided with ready-to-use tools, they end up writing more tests, which in turn results in more stable and healthy code bases.
 
 Main Features:
@@ -17,7 +16,6 @@ Main Features:
 ### AirBnB Enzyme
 Link: http://airbnb.io/enzyme/
 
-Description:
 Enzyme is a JavaScript Testing utility for React that makes it easier to assert, manipulate, and traverse your React Components' output.
 
 Enzyme's API is meant to be intuitive and flexible by mimicking jQuery's API for DOM manipulation and traversal.
@@ -48,9 +46,10 @@ describe('Calculator', () => {
 ```
 yarn test
 ```
+![alt text](img/cli.png "Cli")
 
 ####  Webstorm
-
+![alt text](img/webstorm-config.png "Webstorm config")
 
 ### Check code coverage
 #### Configuration
@@ -58,15 +57,16 @@ Enable code coverage option in your test script (package.json):
 
 ````
   "scripts": {
-    "test": "react-scripts-ts test --env=jsdom --coverage" ,
+    "test-coverage": "react-scripts-ts test --env=jsdom --coverage" ,
                                                ^^^^^^^^^^
   }
 ````
 
 #### Run 
 ```
-yarn test
+yarn test-coverage
 ```
+![alt text](img/coverage.png "Cli")
 
 
 ### Write a simple test for react components 
@@ -94,7 +94,7 @@ describe('<Calucaltor />', () => {
 #### Query render result:
 ```
 it('should render value1, value2 and a button', () => {
-    const sut = mount(<Calculator/>);
+    const sut = shallow(<Calculator/>);
     expect(sut).not.toBeNull();
     
     const controls = {
@@ -133,5 +133,9 @@ it('should return correct value if calc was clicked', () => {
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 });
 ```
+#### Rendering modes:
+- shallow() => Shallow: Shallow rendering is useful to constrain yourself to testing a component as a unit, and to ensure that your tests aren't indirectly asserting on behavior of child components.
+- mount() => Full DOM Rendering: Full DOM rendering is ideal for use cases where you have components that may interact with DOM APIs, or may require the full lifecycle in order to fully test the component (i.e., componentDidMount etc.)
+- render() => Static Rendered Markup: enzyme's render function is used to render react components to static HTML and analyze the resulting HTML structure.
 
 #TBC
