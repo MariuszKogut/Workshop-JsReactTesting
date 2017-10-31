@@ -20,7 +20,8 @@
   "scripts": {
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
-    "test": "react-scripts-ts test --env=jsdom --coverage --setupTestFrameworkScriptFile=raf/polyfill",
+    "test": "react-scripts-ts test --env=jsdom --setupTestFrameworkScriptFile=raf/polyfill",
+    "test-coverage": "react-scripts-ts test --env=jsdom --coverage --setupTestFrameworkScriptFile=raf/polyfill",
     "eject": "react-scripts-ts eject"
   }
 }
